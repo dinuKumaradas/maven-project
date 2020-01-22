@@ -11,7 +11,7 @@ stage('cloning code')
 
 steps
 
-{git 'https://github.com/chaitanyapratap19/maven-project.git'
+{git 'https://github.com/dinuKumaradas/maven-project.git'
 }
 }
 
@@ -58,7 +58,7 @@ stage('deploy to  tomcat')
 steps
 {
     sshagent(['tomcat']) {
-	 sh 'scp -o StrictHostKeyChecking=no */target/*.war ec2-user@172.31.82.228:/var/lib/tomcat/webapps'
+	 sh 'scp -o StrictHostKeyChecking=no */target/*.war ec2-user@3.15.32.235:/var/lib/tomcat/webapps'
 						}
 }
 }
